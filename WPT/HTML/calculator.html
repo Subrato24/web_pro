@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../CSS/calculator.css">
+</head>
+<body>
+    <div class="box">
+     <div class="main">
+        <h3>CALCULATOR</h3>
+        <!-- <div><input type="number" id="num1" placeholder="value 1"></div> -->
+        <!-- <div><input type="number" id="num2" placeholder="value 2"></div> -->
+        <!-- <div><input type="number" id="result" placeholder="result"></div> -->
+        <div class="one"> <textarea name="num1" id="num1" cols="10" rows="1" placeholder="num1"></textarea></div>
+        <div class="two"> <textarea name="num2" id="num2" cols="10" rows="1" placeholder="num2"></textarea></div>
+        <div> <textarea name="result" id="result" cols="10" rows="1" placeholder="RESULT"></textarea></div>
+        <div id="key">
+            <div><button type="submit" onclick="sum()">SUM</button></div>
+            <div><button type="submit" onclick="mul()">MUl</button></div>
+            <div><button type="submit" onclick="div()">DIV</button></div>
+            <div><button type="submit" onclick="sub()">SUB</button></div>
+            <div><button type="button" onclick="CLEAR()">CLEAR</button></div>
+        </div>        
+     </div>
+    </div>
+    <script>
+        function sum(){
+            var first = parseInt(document.getElementById("num1").value);
+            var second =  parseInt(document.getElementById("num2").value);
+            var result= first+second;
+            document.getElementById("result").innerHTML=result;
+        }
+        function mul(){
+            var first = parseInt(document.getElementById("num1").value);
+            var second =  parseInt(document.getElementById("num2").value);
+            var result= (first*second);
+            document.getElementById("result").innerHTML=result;
+        }
+        function div(){
+            var first = parseInt(document.getElementById("num1").value);
+            var second =  parseInt(document.getElementById("num2").value);
+            var result= first/second;
+            document.getElementById("result").innerHTML=result;
+        }
+        function sub(){
+            var first = parseInt(document.getElementById("num1").value);
+            var second =  parseInt(document.getElementById("num2").value);
+            var result= first-second;
+            document.getElementById("result").innerHTML=result;
+        }    
+        function CLEAR(){;
+            document.getElementById("result").innerHTML="";
+        }
+
+    </script>
+</body>
+</html>

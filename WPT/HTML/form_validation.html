@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/form_validation.css">
+    <script src="../JavaScript/form_validation.js"></script>
+</head>
+<body>
+    <div class="container-fluid" id="div">
+        <form action="" class="form-label mt-3" onsubmit="validate()">
+            <label for="" id="first"><b>Enter you name:</b></label>
+            <input type="text" id="name" value="name" class="form-control" placeholder="Enter name">
+            <label for="" id="second"><b>Enter your gmail:</b></label>
+            <input type="gmail" id="gml" value="gmail" class="form-control" placeholder="Enter gmail">
+            <label for="" id="third"><b>Enter Password:</b></label>
+            <input type="password" id="pwd" value="password" class="form-control" placeholder="Enter password">
+            <label for="" class="lb"><b>SELECT YOUR COUNTRY:</b></label>
+            <select name="county" id="sel">
+                <option value=""><b>select your country</b></option>
+                <option value="india">India</option>
+                <option value="u.k">U.K</option>
+                <option value="u.s.a">U.S.A</option>
+            </select><br>
+            <div class="chk">
+            <input type="checkbox" name="adidas" value="cloths"><b>CLOTHS</b>
+            <input type="checkbox" name="adidas" value="shoes"><b>SHOES</b>
+            <input type="checkbox" name="adidas" value="sports"><b>SPORTS</b><br>
+            </div>
+            <button type="submit" id="b1" class="btn btn-danger mt-3 mb-2">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/AssignmentD3.css">
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div><h3>YOUR CONTENT:</h3></div>
+            <div><textarea name="message" id="msg" cols="20" rows="10" placeholder="write here..."></textarea></div>
+            <div id="demo"></div>
+        </div>
+        <div>
+            <div><textarea name="replaceWith" id="tC" cols="18" rows="1" placeholder="To be Change"></textarea>
+            <div><textarea name="rplWith" id="cW" cols="18" rows="1" placeholder="change with "></textarea></div></div>
+        </div>
+        <div>
+            <button type="submit" id="all" onclick="replaceTotal()">Replace All</button>
+            <button type="submit" id="one" onclick="replaceOne()">replace One</button>
+        </div>
+    </div>
+    <script>
+        
+        function replaceTotal(){
+            var msg= document.getElementById("msg").value;
+            console.log(tC);
+            console.log(cW);
+            var fResult= msg.replace(document.getElementById("tC").value,document.getElementById("cW").value);
+            console.log(fResult);
+            document.getElementById("msg").value=fResult;
+        }
+        function replaceOne(){
+            var msg= document.getElementById("msg").value;
+            console.log(tC);
+            console.log(cW);
+            var fResult= msg.replaceAll(document.getElementById("tC").value,document.getElementById("cW").value);
+            console.log(fResult);
+            document.getElementById("msg").value=fResult;
+        }
+    </script>
+</body>
+</html>

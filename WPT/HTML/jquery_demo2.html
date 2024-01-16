@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h2>Click event</h2>
+    <img id="img2" src="../Assects/Images/shoe2.jpg" height="150px" alt="photo">
+    <img id="img1" src="../Assects/Images/shoe1.jpg" height="150px" alt="photo">
+    
+    <hr>
+    <script>
+        $(document).ready(()=>{
+            $("#img1").dblclick(function(){
+                $(this).hide();
+            });
+            $("#img2").hover(function(){
+                $(this).hide();
+                    // 2000,function(){
+                    // window.alert("YO");
+                //});
+                
+            });
+            $("#img2").mouseleave(function(){
+                $(this).show();
+            });
+        });
+        
+    </script>
+</body>
+</html>

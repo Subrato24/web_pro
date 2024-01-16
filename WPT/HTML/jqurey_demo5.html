@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="cls1">
+        <img id="img1" src="../Assects/Images/shoe2.jpg" height="200px" alt="image"><br>
+
+        <button type="button" id="btnhide">hide</button>
+        <button type="button" id="btnshow">show</button>
+        <button type="button" id="btnToggle">Toggel</button>
+        <hr>
+        <h2>slide.up,down,toggal</h2>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid hic sed quisquam perferendis praesentium laboriosam deleniti ipsa deserunt voluptate, iure, nihil culpa, quia commodi blanditiis ullam dolorum laudantium itaque provident.</p>
+        <button type="button" id="slideUP">UP</button>
+        <button type="button" id="slideDown">Down</button>
+        <button type="button" id="slideToggle">Toggel</button>
+        </div>
+    </header>
+    <script>
+        $(document).ready(function(){
+            $("#btnhide").click(function(){
+                $("#img1").hide(1000);
+            });
+            $("#btnshow").click(function(){
+                $("#img1").show(1000);
+            });
+            $("#btnToggle").click(function(){
+                $("#img1").toggle(1000);
+            });
+            // $("#btnslidup").click(function(){
+            //     $("#slideUP").slideUp(1000);
+            // });
+            $("slideUP").click(function(){
+                $("#p1").slideUp(1000);
+            });
+            $("#slideDown").click(function(){
+                $("#p1").slideDown(1000);
+            });
+            $("#btnToggle").click(function(){
+                $("#p1").slideToggle(1000);
+            })
+        })
+    </script>
+</body>
+</html>

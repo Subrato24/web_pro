@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="cls1">Subrato Ghosh</h1>
+        <img id="ig" height="150px" src="../Assects/Images/bg1.jfif" alt="image">
+    </header>
+    <script>
+        $(document).ready(function(){
+            $(".cls1").hover(function(){
+                $(this).css({"color":"blue","textAlign":"center","width":"100px"})
+            });
+            $("#ig").hover(function(){
+                $(this).css({"border-radius":"100px" })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.box .main{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+    box-shadow: 10px 10px 10px;
+}
+.one{
+    display: inline;
+}
+.two{
+    display: inline;
+}
+.main #key{
+    margin: 14px;
+    display: flex;
+    justify-content: space-around;
+}

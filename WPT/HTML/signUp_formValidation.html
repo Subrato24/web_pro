@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <!-- <script src="../JavaScript/form1.js"></script> -->
+    <title>My_Form</title>
+</head>
+<body style="background-color: darkgrey;">
+    <div class="container" style="margin: 20px;padding: 10px; width: 400px ; border: 2px solid black; box-shadow: 10px 10px 10px; border-radius: 10px;background-color: bisque;">
+        <form onsubmit="check()" class="form-group">
+            <h3 style="text-align: center; color: darkgray;">SIGN_UP FORM</h3>
+            <input class="form-control" id="name" type="text" placeholder="Enter your username">
+            <input class="form-control" id="password" type="password" placeholder="Enter your password">
+            <input class="form-control" id="email" type="email" placeholder="Enter your E-mail">
+            <label for="exampleDropdown"><b>Select company</b></label>
+            <select class="form-control" id="company">
+                <option value="Google">Google</option>
+                <option value="facebool">facebook</option>
+                <option value="Microsoft">MicroSoft</option>
+            </select>
+            <div>
+                <label><b>select your gender</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male">
+                    <label class="form-check-label">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="femail" checked>
+                    <label class="form-check-label">
+                      Femail
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="other" checked>
+                    <label class="form-check-label">
+                      Other
+                    </label>
+                  </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary" style="margin: 10px;" >SIGN-UP</button> 
+            <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">terms and condition</a>
+        </form>
+    </div>
+    <script>
+        function check(){
+    let name= document.getElementById("name").value;
+    let pass= document.getElementById("password").value;
+    let email= document.getElementById("email").value;
+    let company = document.getElementById("company").value;
+    if(name===""){
+        window.alert("name is missing");
+    }
+    else if(pass===""){
+        window.alert("password is missing");
+    }
+    else if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(pass)){
+        window.alert("your pssword should contain minimum eight characters, at least one letter and one number:");
+    }
+    else if(email===""){
+        window.alert("email is missing");
+    }
+    else if(!/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(email)){
+        window.alert('invalid email format');
+    }
+    else{
+        window.alert('welcome '+name);
+    }
+
+    console.log(name);
+    console.log(email);
+    console.log(company);
+
+    sessionStorage.setItem("name",name);
+}
+    </script>
+</body>
+</html>
